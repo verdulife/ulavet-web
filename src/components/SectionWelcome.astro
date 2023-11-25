@@ -1,0 +1,39 @@
+---
+import Container from "@/components/Container.astro";
+import { Image } from "astro:assets";
+import home from "@/assets/home.jpg";
+---
+
+<section id="inici" class="bg-white mb-20 md:mb-48 h-screen px-4">
+  <Container>
+    <div class="flex items-center justify-center xl:justify-start h-full">
+      <div class="mt-18 text-center xl:text-left max-w-xl z-10">
+        <h1
+          class="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 mb-6"
+        >
+          El mejor cuidado
+          <br />
+           para tus <span class="font-bold text-ula-green">amigos</span>
+        </h1>
+
+        <p class="font-normal text-xl leading-relaxed mb-12">
+          Descubre un espacio dedicado al cuidado integral de gatos y perros.
+          Confía en nosotros para el bienestar y felicidad de tus fieles
+          compañeros.
+        </p>
+
+        <button
+          class="px-10 py-3 bg-ula-green text-white font-semibold text-lg rounded-xl hover:saturate-150 transition"
+        >
+          Contacta'ns
+        </button>
+      </div>
+
+      <div
+        class="absolute block z-0 top-0 right-0 h-screen opacity-25 xl:opacity-100"
+      >
+        <Image src={home} alt="ULABET portada" class="h-full object-cover" />
+      </div>
+    </div>
+  </Container>
+</section>

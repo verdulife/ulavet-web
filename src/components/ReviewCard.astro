@@ -1,0 +1,35 @@
+---
+import Star from "@/assets/Star.astro";
+
+interface Props {
+  avatar: string;
+  name: string;
+  review: string;
+}
+
+const { avatar, name, review } = Astro.props;
+---
+
+<div class="flex flex-col gap-2 bg-gray-100 rounded-lg mb-10 md:mb-0 p-8">
+  <picture>
+    <img src={avatar} alt={name} />
+  </picture>
+
+  <header class="flex flex-col">
+    <h3 class="font-semibold text-gray-900 text-xl">
+      {name}
+    </h3>
+    
+    <div class="flex items-center gap-2 text-yellow-500">
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+    </div>
+  </header>
+
+  <p class="font-normal text-sm lg:text-md text-gray-400">
+    {review}
+  </p>
+</div>

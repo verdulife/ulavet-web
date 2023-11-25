@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import Container from "./Container.astro";
+import docCat from "@/assets/dog-cat.jpg";
+import Stethoscope from "@/assets/Stethoscope.astro";
+import Vaccine from "@/assets/Vaccine.astro";
+import Bag from "@/assets/Bag.astro";
+import ServiceCard from "./ServiceCard.astro";
+---
+
+<section id="serveis" class="bg-white py-10 xl:relative px-4">
+  <Container>
+    <div class="flex flex-col xl:flex-row justify-end items-center text-center md:text-left">
+      <div class="hidden xl:block xl:absolute left-10 w-full">
+        <Image src={docCat} alt="ULAVET Gos i gat" class="w-1/2" />
+      </div>
+
+      <div class="z-10">
+        <header class="max-w-xl">
+          <h2
+            class="font-semibold text-gray-900 text-4xl leading-normal mb-6"
+          >
+            Serveis <span class="font-bold text-ula-green">ULAVET</span>
+          </h2>
+
+          <p class="font-normal text-gray-400 text-xl mb-16">
+            Aquests són alguns dels serveis que oferim a ULAVET per assegurar la
+            salut i felicitat dels teus éssers estimats de quatre potes.
+          </p>
+        </header>
+
+        <ul class="max-w-xl">
+          <ServiceCard>
+            <Fragment slot="icon">
+              <Stethoscope />
+            </Fragment>
+            <Fragment slot="title">Consulta Veterinària</Fragment>
+            <Fragment slot="desc">
+              El teu punt de partida per al benestar de la teva mascota. Els
+              nostres experts veterinaris ofereixen avaluacions integrals i
+              consells personalitzats.
+            </Fragment>
+          </ServiceCard>
+
+          <ServiceCard>
+            <Fragment slot="icon">
+              <Vaccine />
+            </Fragment>
+            <Fragment slot="title">Vacunació i Prevenció</Fragment>
+            <Fragment slot="desc">
+              Mantingues els teus companys peluts protegits contra malalties.
+              Oferim programes de vacunació i estratègies de prevenció per a una
+              vida saludable.
+            </Fragment>
+          </ServiceCard>
+
+          <ServiceCard>
+            <Fragment slot="icon">
+              <Bag />
+            </Fragment>
+            <Fragment slot="title">Botiga Veterinària</Fragment>
+            <Fragment slot="desc">
+              Troba productes de qualitat a la nostra botiga veterinària, des
+              d'aliments premium fins a joguines i accessoris, tot seleccionat
+              per al benestar de les teves mascotes.
+            </Fragment>
+          </ServiceCard>
+        </ul>
+      </div>
+    </div>
+  </Container>
+</section>

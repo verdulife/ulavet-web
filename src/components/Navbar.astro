@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import Container from "./Container.astro";
+import logo from "@/assets/logo.jpg";
+---
+
+<header id="nav" class="fixed inset-0 bottom-auto z-50 p-8 transition-all">
+  <Container>
+    <nav class="flex items-center justify-between">
+      <a id="logo" href="/" class="h-28 transition-all">
+        <Image src={logo} alt="ULAVET Logo" class="w-auto h-full object-contain" />
+      </a>
+
+      <ul
+        class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-16 hidden"
+      >
+        <li
+          class="font-semibold text-lg hover:text-ula-green transition mb-5 lg:mb-0"
+        >
+          <a href="#inici">Inici</a>
+        </li>
+
+        <li
+          class="font-semibold text-lg hover:text-ula-green transition mb-5 lg:mb-0"
+        >
+          <a href="#serveis">Serveis</a>
+        </li>
+
+        <li
+          class="font-semibold text-lg hover:text-ula-green transition mb-5 lg:mb-0"
+        >
+          <a href="#nosaltres">Nosaltres</a>
+        </li>
+
+        <li
+          class="font-semibold text-lg hover:text-ula-green transition mb-5 lg:mb-0"
+        >
+          <a href="#contacte">Contacte</a>
+        </li>
+      </ul>
+
+      <button
+        class="px-5 py-3 lg:block border-2 border-ula-green rounded-lg font-semibold text-ula-green text-lg hover:bg-ula-green hover:text-white transition"
+      >
+        Demanar cita
+      </button>
+    </nav>
+  </Container>
+</header>
+
+<script>
+  const nav = document.querySelector("#nav");
+  const logo = document.querySelector("#logo");
+
+  window.addEventListener("scroll", () => {
+    const { scrollY } = window;
+
+    if (scrollY > 125) {
+      nav?.classList.add("bg-white", "border-b", "py-4");
+      logo?.classList.add("h-16");
+    } else if (scrollY < 25) {
+      nav?.classList.remove("bg-white", "border-b", "py-4");
+      logo?.classList.remove("h-16");
+    }
+  });
+</script>

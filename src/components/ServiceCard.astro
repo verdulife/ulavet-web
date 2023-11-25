@@ -1,0 +1,18 @@
+<li
+  class="flex flex-col md:flex-row gap-4 justify-center xl:justify-start mb-20"
+>
+  <picture
+    class="h-20 aspect-square mx-auto md:mx-0 bg-gray-100 rounded-lg flex items-center justify-center mb-5 md:mb-0"
+  >
+    <slot name="icon" />
+  </picture>
+
+  <div>
+    <h4 class="font-semibold text-gray-900 text-2xl mb-2">
+      <slot name="title" />
+      <p class="font-normal text-gray-400 text-xl leading-relaxed">
+        <slot name="desc" />
+      </p>
+    </h4>
+  </div>
+</li>

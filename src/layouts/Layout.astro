@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Cuidado completo para gatos y perros con atención local y venta de productos veterinarios en Sant Pere de Ribes, Barcelona. ¡Confía en nosotros para el bienestar de tus mascotas!description"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body class="text-ula-blue">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    text-wrap: pretty;
+    scroll-behavior: smooth;
+  }
+</style>
