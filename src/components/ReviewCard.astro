@@ -10,17 +10,19 @@ interface Props {
 const { avatar, name, review } = Astro.props;
 ---
 
-<div class="flex flex-col gap-2 bg-gray-100 rounded-lg mb-10 md:mb-0 p-8">
+<div
+  class="relative flex flex-col gap-2 bg-gray-100 rounded-lg mb-10 md:mb-0 p-8 w-80 aspect-square overflow-hidden"
+>
   <picture>
-    <img src={avatar} alt={name} />
+    <img src={avatar} alt={name} class="w-12" />
   </picture>
 
   <header class="flex flex-col">
     <h3 class="font-semibold text-gray-900 text-xl">
       {name}
     </h3>
-    
-    <div class="flex items-center gap-2 text-yellow-500">
+
+    <div class="flex items-center gap-1 text-yellow-500">
       <Star />
       <Star />
       <Star />
@@ -29,7 +31,7 @@ const { avatar, name, review } = Astro.props;
     </div>
   </header>
 
-  <p class="font-normal text-sm lg:text-md text-gray-400">
+  <p class="font-normal text-gray-400 line-clamp-6">
     {review}
   </p>
 </div>

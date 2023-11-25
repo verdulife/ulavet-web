@@ -1,4 +1,6 @@
-export const reviews = [
+import type { Item } from "@/types";
+
+export const reviews: Array<Item> = [
   {
     avatar: "/avatars/alba-ramirez.png",
     name: "Alba Ramírez",

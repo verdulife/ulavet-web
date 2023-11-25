@@ -1,0 +1,60 @@
+---
+import type { Item } from "@/types";
+import ReviewCard from "@/components/ReviewCard.astro";
+
+interface Props {
+  items: Array<Item>;
+  reverse?: boolean;
+  seconds?: string;
+  gap?: string;
+}
+
+const { items, reverse, seconds = "30s", gap = "1rem" } = Astro.props;
+---
+
+<main class="relative flex w-full overflow-hidden">
+  <span
+    class="absolute hidden md:inline top-0 bottom-0 left-0 z-10 self-stretch w-10 md:w-40 bg-gradient-to-r from-ula-green to-transparent"
+  ></span>
+
+  <ul class:list={["flex shrink-0", { reverse }]}>
+    {items.map((item: Item) => <ReviewCard {...item} />)}
+  </ul>
+  <ul class:list={["flex shrink-0", { reverse }]}>
+    {items.map((item: Item) => <ReviewCard {...item} />)}
+  </ul>
+
+  <span
+    class="absolute hidden md:inline top-0 bottom-0 right-0 z-10 self-stretch w-10 md:w-40 bg-gradient-to-l from-ula-green to-transparent"
+  ></span>
+</main>
+
+<style define:vars={{ seconds, gap }}>
+  main {
+    gap: var(--gap);
+  }
+
+  ul {
+    animation: marquee var(--seconds) linear infinite;
+    gap: var(--gap);
+  }
+
+  main:hover > ul,
+  main:focus > ul,
+  main:active > ul {
+    animation-play-state: paused;
+  }
+
+  .reverse {
+    animation-direction: reverse;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+</style>
