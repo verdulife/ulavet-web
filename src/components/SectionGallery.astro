@@ -10,12 +10,12 @@ import posts from "@/assets/posts.json";
         Últimes publicacions
       </h1>
 
-      <ul class="max-w-5xl flex justify-center flex-wrap gap-8">
+      <ul class="max-w-5xl flex justify-center flex-wrap gap-8 [&>li:nth-child(n+5)]:hidden md:[&>li:nth-child(n+5)]:block">
         {
           posts.map(({ src, alt }) => (
             <li>
-              <picture >
-                <img class="rounded-lg border-4 border-white shadow-lg shadow-ula-blue/40" src={src} alt={alt} />
+              <picture>
+                <img class="rounded-lg border-4 border-white shadow-lg shadow-ula-blue/40" src={src} alt={alt} width="300" height="300" loading="lazy" decoding="async" />
               </picture>
             </li>
           ))
@@ -26,7 +26,7 @@ import posts from "@/assets/posts.json";
         href="https://www.instagram.com/ulavetclinicaveterinaria/"
         target="_blank"
         rel="noreferrer"
-        class="px-6 py-3 bg-ula-green text-white font-semibold text-lg rounded-xl hover:saturate-150 transition"
+        class="px-6 py-3 bg-ula-blue text-white font-semibold text-lg rounded-xl hover:saturate-150 transition"
       >
         Veure mes publicacions
       </a>
