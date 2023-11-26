@@ -27,13 +27,7 @@ jobs:
           fi
 
       - name: Install dependencies
-        run: |
-          # Comprobamos si existe el archivo pnpm-lock.yaml
-          if [ -f "pnpm-lock.yaml" ]; then
-            pnpm ci
-          else
-            pnpm i
-          fi
+        run: pnpm i
 
       - name: Run scraping script
         run: pnpm run scrape
