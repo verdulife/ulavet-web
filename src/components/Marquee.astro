@@ -14,7 +14,7 @@ const { items, reverse, seconds = "30s", gap = "1rem" } = Astro.props;
 
 <main class="relative flex w-full overflow-hidden">
   <span
-    class="absolute hidden md:inline top-0 bottom-0 left-0 z-10 self-stretch w-10 md:w-40 bg-gradient-to-r from-ula-blue to-transparent"
+    class="absolute hidden xl:inline top-0 bottom-0 left-0 z-10 self-stretch w-10 md:w-40 bg-gradient-to-r from-ula-blue to-transparent"
   ></span>
 
   <ul class:list={["flex shrink-0", { reverse }]}>
@@ -25,7 +25,7 @@ const { items, reverse, seconds = "30s", gap = "1rem" } = Astro.props;
   </ul>
 
   <span
-    class="absolute hidden md:inline top-0 bottom-0 right-0 z-10 self-stretch w-10 md:w-40 bg-gradient-to-l from-ula-blue to-transparent"
+    class="absolute hidden xl:inline top-0 bottom-0 right-0 z-10 self-stretch w-10 md:w-40 bg-gradient-to-l from-ula-blue to-transparent"
   ></span>
 </main>
 

@@ -27,58 +27,56 @@ import Email from "@/assets/Email.astro";
           height="450"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="w-1/2 aspect-video bg-ula-blue rounded-3xl border-4 border-white shadow-xl shadow-ula-blue/40"
+          class="w-full lg:w-1/2 aspect-square bg-ula-blue rounded-3xl border-4 border-white shadow-xl shadow-ula-blue/40"
         ></iframe>
 
-        <aside class="flex flex-col grow p-8">
-          <ul class="flex flex-col gap-8">
-            <li class="flex flex-wrap items-center gap-4">
-              <picture
-                class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
-              >
-                <Location />
-              </picture>
-              <p class="text-xl font-semibold">
-                C/ Pep Ventura 65,
-                <br />
-                 08810 Sant Pere de Ribes (Barcelona)
-              </p>
-            </li>
-            <li class="flex flex-wrap items-center gap-4">
-              <picture
-                class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
-              >
-                <Email />
-              </picture>
-              <a
-                href="mailto:ulavet.veterinaria@gmail.com"
-                class="text-xl font-semibold"
-              >
-                ulavet.veterinaria@gmail.com
-              </a>
-            </li>
-            <li class="flex flex-wrap items-center gap-4">
-              <picture
-                class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
-              >
-                <Phone />
-              </picture>
-              <a href="tel:0034931741035" class="text-xl font-semibold">
-                93 174 10 35
-              </a>
-            </li>
-            <li class="flex flex-wrap items-center gap-4">
-              <picture
-                class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
-              >
-                <Whatsapp />
-              </picture>
-              <a href="tel:0034931741035" class="text-xl font-semibold">
-                611 092 251
-              </a>
-            </li>
-          </ul>
-        </aside>
+        <ul class="flex flex-col items-center lg:items-start gap-8 p-6 lg:p-8 grow text-center lg:text-left">
+          <li class="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-4">
+            <picture
+              class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
+            >
+              <Location />
+            </picture>
+            <p class="text-xl font-semibold">
+              C/ Pep Ventura 65,
+              <br />
+               08810 Sant Pere de Ribes (Barcelona)
+            </p>
+          </li>
+          <li class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <picture
+              class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
+            >
+              <Email />
+            </picture>
+            <a
+              href="mailto:ulavet.veterinaria@gmail.com"
+              class="text-xl font-semibold"
+            >
+              ulavet.veterinaria@gmail.com
+            </a>
+          </li>
+          <li class="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-4">
+            <picture
+              class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
+            >
+              <Phone />
+            </picture>
+            <a href="tel:0034931741035" class="text-xl font-semibold">
+              93 174 10 35
+            </a>
+          </li>
+          <li class="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-4">
+            <picture
+              class="w-16 aspect-square flex justify-center items-center bg-gray-100 rounded-lg"
+            >
+              <Whatsapp />
+            </picture>
+            <a href="tel:0034931741035" class="text-xl font-semibold">
+              611 092 251
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </Container>
