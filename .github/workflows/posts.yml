@@ -1,9 +1,8 @@
 name: Update posts
 
 on:
-  # schedule:
-  # - cron: "0 2 * * 1"
-  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1"
 
 jobs:
   update:
