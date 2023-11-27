@@ -1,10 +1,10 @@
 ---
-import Container from "./Container.astro";
-
+import Container from "@/components/Container.astro";
+import Paw from "@/assets/Paw.astro";
 ---
 
 <footer class="bg-ula-blue py-10 text-white text-center text-sm">
   <Container>
-    <p>Tots els drets reservats | ULAVET Clinica Veterinària</p>
+    <p class="flex gap-2 justify-center items-center">Tots els drets reservats <Paw /> ULAVET Clinica Veterinària</p>
   </Container>
 </footer>
