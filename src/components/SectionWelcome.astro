@@ -6,40 +6,48 @@ import home from "@/assets/home.jpg";
 
 <section
   id="inici"
-  class="bg-gradient-to-tr from-ula-green/50 to-25% to-transparent h-screen px-4"
+  class="h-screen bg-gradient-to-tr from-ula-green/50 to-transparent to-25% px-4"
 >
   <Container>
-    <div class="flex items-center justify-center xl:justify-start h-full">
-      <div class="mt-18 text-center xl:text-left max-w-xl z-10">
-        <h1
-          class="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 mb-6"
-        >
-          La millor cura per
-          <br />
-           als teus <span class="font-bold text-ula-green">amics</span>
+    <div class="flex h-full items-center justify-center xl:justify-start">
+      <div class="mt-18 z-10 max-w-xl text-center xl:text-left">
+        <h1 class="mb-6 text-5xl font-semibold text-gray-900 lg:text-6xl">
+          Confia en nosaltres per la salut i felicitat dels teus <span
+            class="font-bold text-ula-green">peluts</span
+          >
         </h1>
 
-        <p class="font-normal text-xl leading-relaxed mb-12">
-          Descobriu un espai dedicat a la cura integral de gats i gossos. Confia
-          en nosaltres per al benestar i la felicitat dels teus fidels companys.
+        <p class="mb-12 text-xl font-normal leading-relaxed">
+          Descobreix un espai creat per cuidar, tractar i acompanyar als
+          pacients i les seves famílies, donant un servei complet i de qualitat
+          amb un tracte proper i de confiança juntament a un treball mèdic
+          integratiu amb les màximes garanties.
         </p>
 
-        <a
-          href="#contacte"
-          class="px-5 py-3 bg-ula-blue border-2 border-ula-blue text-white font-semibold text-lg rounded-xl hover:saturate-150 transition"
-        >
-          Contacta'ns
-        </a>
+        <div class="flex gap-2 justify-center xl:justify-start">
+          <a
+            href="#contacte"
+            class="rounded-xl border-2 border-ula-blue bg-ula-blue px-5 py-3 text-lg font-semibold text-white transition hover:saturate-150"
+          >
+            Contacta'ns
+          </a>
+          <a
+            href="#contacte"
+            class="rounded-xl border-2 border-ula-green bg-ula-green px-5 py-3 text-lg font-semibold text-white transition hover:saturate-150"
+          >
+            Serveis veterinaris
+          </a>
+        </div>
       </div>
 
       <div
-        class="absolute block z-0 top-0 right-0 w-full xl:w-auto h-screen opacity-25 xl:opacity-100"
+        class="absolute right-0 top-0 z-0 block h-screen w-full opacity-25 xl:w-auto xl:opacity-100"
       >
         <Image
           src={home}
           alt="ULABET portada"
           loading="eager"
-          class="h-full w-full xl:w-auto object-cover"
+          class="h-full w-full object-cover xl:w-auto"
         />
       </div>
     </div>

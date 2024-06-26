@@ -10,23 +10,26 @@ import Bag from "@/assets/Bag.astro";
 
 <section id="serveis" class="bg-white px-4 pt-32">
   <Container>
-    <div class="flex flex-col items-center text-center gap-20">
+    <div class="flex flex-col items-center gap-20 text-center">
       <header class="max-w-xl">
-        <h2 class="font-semibold text-gray-900 text-4xl leading-normal">
+        <h2 class="text-4xl font-semibold leading-normal text-gray-900">
           Serveis <span class="font-bold text-ula-green">ULAVET</span>
         </h2>
       </header>
 
-      <ul class="flex flex-wrap gap-y-8 justify-center">
+      <ul class="flex flex-wrap items-start justify-center gap-y-8">
         <ServiceCard>
           <Fragment slot="icon">
             <Stethoscope />
           </Fragment>
-          <Fragment slot="title">Consulta Veterinària</Fragment>
+          <Fragment slot="title">Medicina Preventiva</Fragment>
           <Fragment slot="desc">
-            El teu punt de partida per al benestar de la teva mascota. Els
-            nostres experts veterinaris ofereixen avaluacions integrals i
-            consells personalitzats.
+            És l'especialitat que ens permet prevenir moltes malalties com per
+            exemple malalties infeccioses o parasitàries, periodontals o el
+            diagnòstic precoç de diverses patologies. A la vegada que també
+            inclou des de les visites de revisions anuals a vacunes, plans de
+            desparasitació interna i externa, primo-vacunacions de cadells,
+            controls geriàtrics i més.
           </Fragment>
         </ServiceCard>
 
@@ -34,11 +37,11 @@ import Bag from "@/assets/Bag.astro";
           <Fragment slot="icon">
             <Vaccine />
           </Fragment>
-          <Fragment slot="title">Vacunació i Prevenció</Fragment>
+          <Fragment slot="title">Medicina Interna</Fragment>
           <Fragment slot="desc">
-            Mantingues els teus companys peluts protegits contra malalties.
-            Oferim programes de vacunació i estratègies de prevenció per a una
-            vida saludable.
+            És una part de la medicina que s'enfoca en l'estudi, diagnòstic i
+            tractament de malalties que afecten els òrgans interns dels nostres
+            peluts.
           </Fragment>
         </ServiceCard>
 
@@ -46,20 +49,101 @@ import Bag from "@/assets/Bag.astro";
           <Fragment slot="icon">
             <Bag />
           </Fragment>
-          <Fragment slot="title">Botiga Veterinària</Fragment>
+          <Fragment slot="title">Cirurgia General</Fragment>
           <Fragment slot="desc">
-            Troba productes de qualitat a la nostra botiga veterinària, des
-            d'aliments premium fins a joguines i accessoris, tot seleccionat per
-            al benestar de les teves mascotes.
+            Compren des del diagnòstic al tractament de malalties que es resolen
+            mitjançant procediments quirúrgics. El nostre centre compta amb un
+            quiròfan completament equipat i una sala de
+            recuperació/hospitalització pre i postquirúrgica.
+          </Fragment>
+        </ServiceCard>
+
+        <ServiceCard>
+          <Fragment slot="icon">
+            <Bag />
+          </Fragment>
+          <Fragment slot="title">Diagnòstic per Imatge</Fragment>
+          <Fragment slot="desc">
+            És una especialitat totalment necessària per poder diagnosticar i
+            donar tractament a les diverses patologies. A la clínica tenim un
+            equip de raigs X digital i un ecògraf d'última generació.
+          </Fragment>
+        </ServiceCard>
+
+        <ServiceCard>
+          <Fragment slot="icon">
+            <Bag />
+          </Fragment>
+          <Fragment slot="title">Anàlisis Clínics</Fragment>
+          <Fragment slot="desc">
+            L'estudi dels components biològics és imprescindible per facilitar
+            un diagnòstic prematur. Al centre disposem de laboratori propi per
+            la realització de proves d'hematologia, bioquímica, uroanàlisis,
+            citologies, test de femtes, test de malalties parasitàries o
+            infeccioses. A part comptem amb la col·laboració d'un laboratori
+            extern on enviem les mostres que requereixen proves més
+            específiques.
+          </Fragment>
+        </ServiceCard>
+
+        <ServiceCard>
+          <Fragment slot="icon">
+            <Bag />
+          </Fragment>
+          <Fragment slot="title">Dermatologia</Fragment>
+          <Fragment slot="desc">
+            Els problemes dermatològics són un dels motius més comuns de les
+            visites veterinàries. Afecten tant gossos com a gats,
+            independentment de l'edat. Tot i que hi ha certes malalties de son
+            més específiques d'algunes races
+          </Fragment>
+        </ServiceCard>
+
+        <ServiceCard>
+          <Fragment slot="icon">
+            <Bag />
+          </Fragment>
+          <Fragment slot="title">Oncologia</Fragment>
+          <Fragment slot="desc">
+            En les últimes dècades el diagnòstic de patologies oncològiques en
+            les nostres mascotes ha augmentat de forma considerable, per això
+            han anat apareixent noves proves i teràpies. A la clínica disposem
+            de servei especialitzat que us donarà la millor opció de tractament
+            per al vostre pelut i acompanyament a la família en tot el procés.
+          </Fragment>
+        </ServiceCard>
+
+        <ServiceCard>
+          <Fragment slot="icon">
+            <Bag />
+          </Fragment>
+          <Fragment slot="title">Espcialitats Mèdiques Externes</Fragment>
+          <Fragment slot="desc">
+            Comptem amb la cooperació de diferents especialistes externs que
+            donen servei de cardiologia i oftalmologia in situ. I també fem
+            derivacions directes a centres de referència per a servei de TAC/RM,
+            cirurgia mínima invasiva, traumatologia i neurologia.
+          </Fragment>
+        </ServiceCard>
+
+        <ServiceCard>
+          <Fragment slot="icon">
+            <Bag />
+          </Fragment>
+          <Fragment slot="title">Botiga Veterinària Especialitzada</Fragment>
+          <Fragment slot="desc">
+            Troba productes de qualitat a la nostra botiga, desde dietes de
+            prescripció veterinaria i dietes bio fins a productes i accesoris
+            per la salut i benestar de les vostres mascotes.
           </Fragment>
         </ServiceCard>
       </ul>
 
-      <picture class="flex justify-center w-full">
+      <picture class="flex w-full justify-center">
         <Image
           src={docCat}
           alt="ULAVET Gos i gat"
-          class="w-full md:w-2/3 aspect-video object-cover"
+          class="aspect-video w-full object-cover md:w-2/3"
         />
       </picture>
     </div>

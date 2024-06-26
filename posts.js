@@ -10,13 +10,13 @@ await page.waitForSelector("article");
 
 const posts = await page.evaluate(() => {
   const maxPosts = 9;
-  const images = document.querySelectorAll("img[srcset]");
+  const images = document.querySelectorAll('main[role="main"] > div > div:last-of-type img[src]');
   return [].slice
     .call(images, 0, maxPosts)
     .map((img) => ({ url: img.src, alt: img.alt }));
 });
 
-const viewportSize = 300;
+const viewportSize = 400;
 
 for (let i = 0; i < posts.length; i++) {
   const { alt } = posts[i];
@@ -28,6 +28,8 @@ for (let i = 0; i < posts.length; i++) {
   await page.screenshot({ path: `./public/posts/${filename}`, type: "jpeg" });
 
   posts[i] = { alt, src: `./posts/${filename}` };
+
+  console.log(`${i + 1}/${posts.length}`);
 }
 
 const json = JSON.stringify(posts, null, 2);

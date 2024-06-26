@@ -20,16 +20,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body class="text-ula-blue">
-    <div class="overflow-x-hidden w-full">
+  <body class="text-pretty text-ula-blue">
+    <div class="w-full overflow-x-hidden scroll-smooth">
       <slot />
     </div>
   </body>
 </html>
-
-<style is:global>
-  :root {
-    text-wrap: pretty;
-    scroll-behavior: smooth;
-  }
-</style>
