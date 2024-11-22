@@ -1,74 +1,67 @@
 ---
-import { Image } from "astro:assets";
 import Container from "@/components/Container.astro";
-import ServiceCard from "@/components/ServiceCard.astro";
-import docCat from "@/assets/dog-cat.jpg";
-import Stethoscope from "@/assets/Stethoscope.astro";
-import Vaccine from "@/assets/Vaccine.astro";
-import Bag from "@/assets/Bag.astro";
+import TeamCard from "@/components/TeamCard.astro";
 ---
 
-<section id="serveis" class="bg-white px-4 pt-32">
+<section id="equip" class="mt-32 bg-ula-blue px-4 py-32">
   <Container>
-    <div class="flex flex-col items-center gap-20 text-center">
+    <div class="flex flex-col items-center gap-10 text-center">
       <header class="max-w-xl">
-        <h2 class="text-4xl font-semibold leading-normal text-gray-900">
+        <h2 class="text-4xl font-semibold leading-normal text-gray-50">
           Qui som
         </h2>
       </header>
 
-      <ul class="flex flex-wrap items-start justify-center gap-y-8">
-        <ServiceCard>
-          <Fragment slot="icon">
-            <Stethoscope />
-          </Fragment>
-          <Fragment slot="title">Laura Mondejar</Fragment>
-          <Fragment slot="desc">
-            Sòcia i cofundadora d'Ulavet Llicenciada en Veterinària per la
-            Universitat Autònoma de Barcelona l'any 2006, posteriorment es va
-            certificar en l'especialitat de Medicina Interna per la ISVPS.
-            Durant anys va fer vàries estades internacionals en centres de
-            referència i el seu amor pels animals la va portar a fer un
-            voluntariat a la KWH Balikpapan, una reserva d'ossos de Borneo a
-            Indonèsia. Ha estat treballant en diferents centres veterinaris
-            acumulant anys d'experiència fins a crear Ulavet, i segueix en
-            formació constant assistint a diversos congressos tant nacionals com
-            internacionals.
-          </Fragment>
-        </ServiceCard>
+      <ul class="flex max-w-5xl flex-col items-start gap-10">
+        <TeamCard image="equip/ulavet-laura.jpg" name="Laura Mondejar">
+          Sòcia i cofundadora d'Ulavet Llicenciada en Veterinària per la
+          Universitat Autònoma de Barcelona l'any 2006, posteriorment es va
+          certificar en l'especialitat de Medicina Interna per la ISVPS.
+          <br /><br />
+          Durant anys va fer vàries estades internacionals en centres de referència
+          i el seu amor pels animals la va portar a fer un voluntariat a la KWH Balikpapan,
+          una reserva d'ossos de Borneo a Indonèsia.
+          <br /><br />
+          Ha estat treballant en diferents centres veterinaris acumulant anys d'experiència
+          fins a crear Ulavet, i segueix en formació constant assistint a diversos
+          congressos tant nacionals com internacionals.
+        </TeamCard>
 
-        <ServiceCard>
-          <Fragment slot="icon">
-            <Vaccine />
-          </Fragment>
-          <Fragment slot="title">Úrsula Cabistany</Fragment>
-          <Fragment slot="desc">
-            Sòcia i cofundadora d'Ulavet. Llicenciada en Veterinària per la
-            Universitat UCH-CEU de València l'any 2010; posteriorment va seguir
-            la formació amb el Diploma de Postgrau de Cirurgia de teixits tous i
-            el Postgrau d'Anestèsia i Analgèsia d'animals de companyia, ambdós
-            realitzats a la Universitat Autònoma de Barcelona. Va continuar la
-            seva formació i agafant experiència amb varies estades en diferents
-            hospitals en l'àmbit nacional i seguint amb el seu interès en l'àrea
-            de l'oncologia després de fer alguns cursos de citologia i
-            hematologia, l'any 2020 va acabar el Màster Oficial en Oncologia
-            Clínica Veterinària a la UEMC.
-          </Fragment>
-        </ServiceCard>
+        <TeamCard image="equip/ulavet-ursula.jpg" name="Úrsula Cabistany">
+          Sòcia i cofundadora d'Ulavet. Llicenciada en Veterinària per la
+          Universitat UCH-CEU de València l'any 2010; posteriorment va seguir la
+          formació amb el Diploma de Postgrau de Cirurgia de teixits tous i el
+          Postgrau d'Anestèsia i Analgèsia d'animals de companyia, ambdós
+          realitzats a la Universitat Autònoma de Barcelona.
+          <br /><br />
+          Va continuar la seva formació i agafant experiència amb varies estades
+          en diferents hospitals en l'àmbit nacional i seguint amb el seu interès
+          en l'àrea de l'oncologia després de fer alguns cursos de citologia i hematologia,
+          l'any 2020 va acabar el Màster Oficial en Oncologia Clínica Veterinària
+          a la UEMC.
+        </TeamCard>
 
-        <ServiceCard>
-          <Fragment slot="icon">
-            <Bag />
-          </Fragment>
-          <Fragment slot="title">Mariajose Aguerrondo</Fragment>
-          <Fragment slot="desc">
-            ATV. Va acabar el curs d'Auxiliar Tècnic Veterinari l'any 2017 i des
-            de llavors ha anat acumulant experiència en diferents centres
-            veterinaris. Posteriorment, ha fet cursos d'especialitat en
-            analgèsia, anestesia, rehabilitació i fisioteràpia. Presentant un
-            especial interès en tots els temes relacionats amb el quiròfan.
-          </Fragment>
-        </ServiceCard>
+        <TeamCard
+          image="equip/ulavet-mariajose.jpg"
+          name="Mariajose Aguerrondo"
+        >
+          ATV. Va acabar el curs d'Auxiliar Tècnic Veterinari l'any 2017 i des
+          de llavors ha anat acumulant experiència en diferents centres
+          veterinaris. Posteriorment, ha fet cursos d'especialitat en analgèsia,
+          anestesia, rehabilitació i fisioteràpia.
+          <br /><br />
+          Presentant un especial interès en tots els temes relacionats amb el quiròfan.
+        </TeamCard>
+
+        <TeamCard image="equip/ulavet-alison.jpg" name="Alison Jimenez Garcia">
+          ATV. Es va formar com auxiliar tècnic veterinari a l'Institut Kiwoko
+          del 2017-19 i va realitzar les pràctiques a l'Hospital Veterinari de
+          Sitges on ja es va quedar en plantilla fins al 2024.
+          <br /><br />
+          Durant els anys d'hospital va passar per tots els serveis però va acabar
+          formant part de l'equip d'UCI. I l'any 2022 es va seguir formant amb el
+          Curs d'especialització en urgencies d'Ifevet.
+        </TeamCard>
       </ul>
     </div>
   </Container>

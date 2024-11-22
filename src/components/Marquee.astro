@@ -12,7 +12,7 @@ interface Props {
 const { items, reverse, seconds = "30s", gap = "1rem" } = Astro.props;
 ---
 
-<main class="relative flex w-full overflow-hidden">
+<main class="relative flex w-full overflow-hidden pb-10">
   <ul class:list={["flex shrink-0", { reverse }]}>
     {items.map((item: Item) => <ReviewCard {...item} />)}
   </ul>
