@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://www.ulavetclinicaveterinaria.com/sitemap.xml
+Sitemap: https://www.ulavet.com/sitemap-index.xml
