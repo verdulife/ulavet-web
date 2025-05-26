@@ -1,16 +1,18 @@
 ---
-import { Image } from "astro:assets";
 import Container from "@/components/Container.astro";
-import logo from "@/assets/logo.png";
 ---
 
 <header id="nav" class="fixed inset-0 bottom-auto z-50 p-8 transition-all">
   <Container>
     <nav class="flex items-center justify-between">
       <a id="logo" href="/" class:list={["h-20 h-28 transition-all"]}>
-        <Image
-          src={logo}
+        <img
+          src="logo.png"
           alt="ULAVET Logo"
+          width="86"
+          height="112"
+          loading="eager"
+          decoding="async"
           class="h-full w-auto object-contain"
         />
       </a>

@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets";
 import Container from "@/components/Container.astro";
-import home from "@/assets/home.jpg";
 ---
 
 <section
@@ -43,10 +41,13 @@ import home from "@/assets/home.jpg";
       <div
         class="absolute right-0 top-0 z-0 block h-screen w-full opacity-25 xl:w-auto xl:opacity-100"
       >
-        <Image
-          src={home}
+        <img
+          src="home.jpg"
           alt="ULABET portada"
+          width="617"
+          height="933"
           loading="eager"
+          decoding="async"
           class="h-full w-full object-cover xl:w-auto"
         />
       </div>

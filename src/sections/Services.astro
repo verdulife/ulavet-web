@@ -1,8 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import Container from "@/components/Container.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
-import docCat from "@/assets/dog-cat.jpg";
 import Flask from "@/assets/Flask.astro";
 import Heart from "@/assets/Heart.astro";
 import Stethoscope from "@/assets/Stethoscope.astro";
@@ -136,9 +134,13 @@ import Bag from "@/assets/Bag.astro";
       </ul>
 
       <picture class="flex w-full justify-center">
-        <Image
-          src={docCat}
+        <img
+          src="dog-cat.jpg"
           alt="ULAVET Gos i gat"
+          width="853"
+          height="480"
+          loading="lazy"
+          decoding="async"
           class="aspect-video w-full object-cover md:w-2/3"
         />
       </picture>
