@@ -18,11 +18,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
       
       - name: Install system dependencies
         run: |
@@ -30,10 +27,10 @@ jobs:
           sudo apt-get install -y chromium-browser libx11-dev libx11-xcb-dev libxcb-icccm4 libxcb-image0 libxcb-render0 libxcb-xfixes0 libxcb-xinerama0 libxcb-xkb-dev libxkbcommon-x11-0 libatk-adaptor libatk1.0-0 libgtk-3-0 libnss3 libxss1 libasound2
       
       - name: Install dependencies
-        run: npm install
+        run: bun install
       
       - name: Run scrape script
-        run: npm run scrape
+        run: bun run scrape
       
       - name: Commit and push changes
         run: |
