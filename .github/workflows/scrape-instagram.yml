@@ -1,0 +1,49 @@
+name: Scrape Instagram Posts
+
+on:
+  schedule:
+    # Ejecuta cada lunes a las 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  # Permite ejecutar manualmente desde la interfaz de GitHub
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser libx11-dev libx11-xcb-dev libxcb-icccm4 libxcb-image0 libxcb-render0 libxcb-xfixes0 libxcb-xinerama0 libxcb-xkb-dev libxkbcommon-x11-0 libatk-adaptor libatk1.0-0 libgtk-3-0 libnss3 libxss1 libasound2
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run scrape script
+        run: npm run scrape
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/posts/
+          git add src/assets/posts.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update instagram posts [automated]"
+            git push
+          fi

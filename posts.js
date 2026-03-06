@@ -10,7 +10,7 @@ await page.waitForSelector("article");
 
 const posts = await page.evaluate(() => {
   const maxPosts = 9;
-  const images = document.querySelectorAll('main[role="main"] > div > div:last-of-type img[src]');
+  const images = document.querySelectorAll('div._aagv img[src]');
   return [].slice
     .call(images, 0, maxPosts)
     .map((img) => ({ url: img.src, alt: img.alt }));
