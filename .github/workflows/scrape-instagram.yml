@@ -24,7 +24,8 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser libx11-dev libx11-xcb-dev libxcb-icccm4 libxcb-image0 libxcb-render0 libxcb-xfixes0 libxcb-xinerama0 libxcb-xkb-dev libxkbcommon-x11-0 libatk-adaptor libatk1.0-0 libgtk-3-0 libnss3 libxss1 libasound2
+          # basic libraries Puppeteer needs; remove problematic package
+          sudo apt-get install -y chromium-browser libx11-dev libx11-xcb-dev libxcb-icccm4 libxcb-image0 libxcb-render0 libxcb-xfixes0 libxcb-xinerama0 libxcb-xkb-dev libxkbcommon-x11-0 libatk-adaptor libatk1.0-0 libgtk-3-0 libnss3 libxss1
       
       - name: Install dependencies
         run: bun install
