@@ -8,8 +8,15 @@ const browser = await puppeteer.launch({
 });
 const page = await browser.newPage();
 
-await page.goto(URL);
-await page.waitForSelector("article");
+// simulate a regular desktop browser and set a reasonable viewport
+await page.setUserAgent(
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+);
+await page.setViewport({ width: 1280, height: 800 });
+
+// wait longer and for network idle to ensure the article bloc has rendered
+await page.goto(URL, { waitUntil: "networkidle2", timeout: 60000 });
+await page.waitForSelector("article", { timeout: 60000 });
 
 const posts = await page.evaluate(() => {
   const maxPosts = 9;
