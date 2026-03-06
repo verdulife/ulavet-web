@@ -2,7 +2,10 @@ import puppeteer from "puppeteer";
 import { writeFileSync } from "node:fs";
 
 const URL = "https://www.instagram.com/ulavetclinicaveterinaria";
-const browser = await puppeteer.launch({ headless: "new" });
+const browser = await puppeteer.launch({
+  headless: "new",
+  args: ["--no-sandbox", "--disable-setuid-sandbox"],
+});
 const page = await browser.newPage();
 
 await page.goto(URL);
